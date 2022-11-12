@@ -15,7 +15,6 @@ server {
   location / {
     return 301 https://$host:{{ $.PROXY_SSL_PORT }}$request_uri;
   }
-{{ end }}
 }
 {{ else if eq $scheme "https"}}
 server {
