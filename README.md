@@ -8,6 +8,9 @@ dokku redis:link socialn8edev
 dokku domains:set social.n8e.dev
 dokku letsencrypt:enable social.n8e.dev
 
+dokku config:set LOCAL_DOMAIN=n8e.dev
+dokku config:set WEB_DOMAIN=social.n8e.dev
+
 dokku config:set SECRET_KEY_BASE=$(docker run --rm -it -w /app/www --entrypoint rake lscr.io/linuxserver/mastodon:4.0.0-develop secret)
 
 dokku config:set OTP_SECRET=$(docker run --rm -it -w /app/www --entrypoint rake lscr.io/linuxserver/mastodon:4.0.0-develop secret)
