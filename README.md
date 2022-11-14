@@ -16,4 +16,6 @@ dokku config:set SECRET_KEY_BASE=$(docker run --rm -it -w /app/www --entrypoint 
 dokku config:set OTP_SECRET=$(docker run --rm -it -w /app/www --entrypoint rake lscr.io/linuxserver/mastodon:4.0.0-develop secret)
 
 dokku config:set $(docker run --rm -it -w /app/www --entrypoint rake lscr.io/linuxserver/mastodon:4.0.0-develop mastodon:webpush:generate_vapid_key)
+
+RAILS_ENV=production bin/tootctl accounts create pieceofthepie --email adam@acpr.dev --confirmed --role Owner
 ```

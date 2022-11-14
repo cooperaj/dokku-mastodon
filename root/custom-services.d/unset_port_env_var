@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+#
+# Dokku sets the PORT environment variable which both the main Mastodon app and the 
+# streaming app obey. We don't want this as it breaks the image.
+#
+
+rm /run/s6/container_environment/PORT
