@@ -38,7 +38,8 @@ server {
   }
 
   {{ if var "S3_ALIAS_HOST" }}
-  # ensures any old cached media files that were stored locally and referenced out in the wild can still be found
+  # ensures any old cached media files that were stored locally and referenced out in the wild 
+  # before moving to an S3 based system can still be found.
   location /system {
     rewrite ^/system(.*) https://{{ var "S3_ALIAS_HOST" }}$1 permanent;
   }
