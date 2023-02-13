@@ -9,4 +9,5 @@
 RAILS_ENV=production 
 
 /app/www/bin/tootctl media remove
+/app/www/bin/tootctl media remove --prune-profiles
 /app/www/bin/tootctl preview_cards remove
