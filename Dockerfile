@@ -1,3 +1,3 @@
-FROM lscr.io/linuxserver/mastodon:4.4.3
+FROM lscr.io/linuxserver/mastodon:4.5.0
 
 COPY root/ /
