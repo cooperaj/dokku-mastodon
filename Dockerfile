@@ -1,3 +1,5 @@
-FROM lscr.io/linuxserver/mastodon:4.5.5
+FROM lscr.io/linuxserver/mastodon:4.5.8
 
 COPY root/ /
+
+RUN chmod a+x /custom-cont-init.d/unset_port_env_var
