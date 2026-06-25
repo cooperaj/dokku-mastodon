@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/mastodon:4.6.0
+FROM ghcr.io/linuxserver/mastodon:4.6.1
 
 COPY root/ /
 
